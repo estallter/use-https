@@ -5,11 +5,12 @@ var content2 = 'Let\'s say you are the user. All information you send and receiv
 'in "packets"';
 
 var content3 = 'Unfortunately, with the right tools, anyone on the same network, ' +
-'perhaps some malicious hacker, can see the content of these packets.';
+'perhaps some malicious hacker, can see the content of these packets through "packet ' +
+'sniffing."';
 
 var content4 = 'On unsecured connections to a website, someone can take a peek at ' +
-'your login session cookies to a website and copy it. Using this cookie, they can put it into ' +
-'their browser to use a website on your account without ever having to log in.';
+'your login session cookies to a website and copy it. With this cookie, they can use ' +
+'your account on a website without ever having to log in.';
 
 var content5 = 'Another risk is that if you are submitting or receiving sensitive data ' +
 'like credit card info, social security numbers, or personal info, this information ' +
@@ -17,8 +18,8 @@ var content5 = 'Another risk is that if you are submitting or receiving sensitiv
 
 var content6 = 'Experienced hackers can also exploit your network in such a way that ' +
 'their computer will learn how to pretend to be the wifi router, and also pretend to ' +
-'be your computer. The hacker can then force your wifi connection to cut out, but ' +
-'when your computer tries to reestablish connection, it instead connects to the hacker\'s ' +
+'be your computer. The hacker can then force your connection to cut out, but ' +
+'when your computer automatically tries to reestablish connection, it instead connects to the hacker\'s ' +
 'device disguised as your original wifi network. The hacker\'s device then poses as ' +
 'your computer to the network.';
 
@@ -32,7 +33,7 @@ var content8 = 'The hacker can see all of your internet traffic, pretend to ' +
 'be your computer, or even alter packets before they are transmitted to the other side. ' +
 'This often happens without you ever realizing you are compromised. Imagine you are ' +
 'arranging to tranfer money to someone\'s bank account; they send you their account info, ' +
-'but before it gets to you the hacker replaces it with their own account info. ';
+'but before it gets to you the hacker alters the packets to replace the info with their own account info. ';
 
 var content9 = 'All these security risks are scary, but how can we prevent them? ' +
 'HTTPS is a protocol for communicating with web servers when your ' +
@@ -41,7 +42,7 @@ var content9 = 'All these security risks are scary, but how can we prevent them?
 
 var content10 = 'This is a special method of exchanging encryption keys that prevents ' +
 'anyone who sees your traffic in the middle of transmission from being able to also ' +
-'get the key.';
+'obtain the keys.';
 
 var content11 = 'Once these encryption keys are exhanged between you and the server, ' +
 'you can freely send and receive encrypted information that will not be readable by ' +
