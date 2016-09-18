@@ -45,7 +45,9 @@ var content10 = 'This is a special method of exchanging encryption keys that pre
 
 var content11 = 'Once these encryption keys are exhanged between you and the server, ' +
 'you can freely send and receive encrypted information that will not be readable by ' +
-'anyone sniffing your packets, even if they have made themself a Man in the Middle.';
+'anyone sniffing your packets, even if they have made themself a Man in the Middle. ' +
+'Packets also cannot easily be altered without your computer or the server knowing ' +
+'that tampering has occurred.';
 
 var content12 = 'Most websites these days are well aware of the security problems with HTTP, ' +
 'and usually make HTTPS the default method of communication. However, older websites ' +
@@ -54,7 +56,8 @@ var content12 = 'Most websites these days are well aware of the security problem
 
 var content13 = 'In conclusion: always use HTTPS when transmitting sensitive information ' +
 'online. If you have no choice but to use an HTTP website, think twice about using ' +
-'the same email or password that you use for other sites.';
+'it for important information, or using the same email or password that you use for ' +
+'other sites.';
 
 function updateContent(state) {
 
@@ -117,6 +120,7 @@ function updateContent(state) {
       break;
     case 13:
       $('#info p').html(content13);
+      $('#next').css('display', 'none');
   }
 
 }
