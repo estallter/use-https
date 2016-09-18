@@ -129,7 +129,7 @@ $(document).ready(function() {
     updateContent(++current_state);
   });
 
-
+  /** signal animation
   var i = 1;
   //start with all boxes invisible
   var selector = "#hacker-router .signal";
@@ -152,7 +152,7 @@ $(document).ready(function() {
     } else {
       i++;
     }
-  },450);
+  },450); */
 
 
 
