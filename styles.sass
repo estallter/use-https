@@ -1,0 +1,379 @@
+// Reset
+*
+  margin: 0
+  padding: 0
+
+$primary: #E2711D
+$secondary: #F35B04
+$accent-1: #FFC971
+$accent-2: #B39C4D
+$white: white
+
+$inconsolata: 'Inconsolata', monospace
+
+body
+  background-color: $primary
+  background: linear-gradient(to bottom right, $primary, lighten($primary, 10%))
+  background: -webkit-linear-gradient(left top, $primary, lighten($primary, 10%))
+  background: -moz-linear-gradient(left top, $primary, lighten($primary, 10%))
+  font-family: $inconsolata
+
+#container
+  position: relative
+  width: 1200px
+  height: 514px
+
+#header
+  text-align: center
+  margin-top: 30px
+  font-size: 50px
+
+#victim, #server, #hacker, #router
+  width: 150px
+  height: 150px
+  z-index: 2
+
+#victim-label, #server-label, #hacker-label, #router-label
+  font-family: $inconsolata
+  font-size: 18px
+
+#victim
+  position: absolute
+  top: 30px
+  left: 120px
+
+#router
+  position: absolute
+  top: 25px
+  left: 686px
+
+#server
+  position: absolute
+  top: 44px
+  right: 74px
+
+#hacker
+  position: absolute
+  bottom: 65px
+  left: 300px
+  visibility: hidden
+
+#victim-label
+  position: absolute
+  top: 21px
+  left: 169px
+
+#router-label
+  position: absolute
+  top: 6px
+  right: 380px
+
+#server-label
+  position: absolute
+  top: 23px
+  right: 103px
+
+#hacker-label
+  position: absolute
+  bottom: 51px
+  left: 304px
+  visibility: hidden
+
+
+
+.signal
+  height: 80px
+  width: 80px
+  border: 7px solid transparent
+  border-radius: 50%
+  border-right-color: black
+  display: block
+
+#victim-router
+  display: flex
+  justify-content: space-between
+  width: 470px
+  height: 80px
+  position: absolute
+  top: 59px
+  left: 200px
+  // animation-name: fade
+  animation-delay: 1s
+  animation-duration: 3s
+  animation-timing-function: ease-in
+  animation-fill-mode: forwards
+
+#victim-hacker
+  display: flex
+  justify-content: space-between
+  width: 200px
+  height: 80px
+  position: absolute
+  top: 176px
+  left: 176px
+  transform: rotate(45deg)
+  opacity: 0
+  // animation-name: fade
+  animation-delay: 2s
+  animation-duration: 2.5s
+  animation-timing-function: ease-in
+  animation-fill-mode: forwards
+  animation-direction: reverse
+
+#hacker-router
+  display: flex
+  justify-content: space-between
+  width: 350px
+  height: 80px
+  position: absolute
+  bottom: 214px
+  left: 375px
+  transform: rotate(-34deg)
+  visibility: hidden
+
+
+#router-server
+  display: flex
+  justify-content: space-between
+  width: 200px
+  height: 80px
+  position: absolute
+  top: 69px
+  right: 194px
+
+#magnifying
+  visibility: hidden
+  width: 150px
+  height: 150px
+  top: 80px
+  left: 574px
+  position: absolute
+  z-index: 3
+
+#info
+  font-family: $inconsolata
+  position: absolute
+  bottom: 54px
+  right: 54px
+  width: 400px
+  height: 220px
+  -moz-box-shadow:    inset 0 0 5px rgba(black, .6)
+  -webkit-box-shadow: inset 0 0 5px rgba(black, .6)
+  box-shadow: inset 0 0 5px rgba(black, .6)
+  border-radius: 5px
+  background-color: $secondary
+  background: linear-gradient(left top, $secondary, lighten($secondary, 10%))
+  background: -webkit-linear-gradient(left top, $secondary, lighten($secondary, 10%))
+  background: -moz-linear-gradient(left top, $secondary, lighten($secondary, 10%))
+  padding: 8px
+  font-size: 18px
+
+#info button
+  font-size: 20px
+  position: absolute
+  bottom: 5px
+  right: 5px
+  width: 100px
+  height: 40px
+  border: none
+  border-radius: 3px
+  -webkit-box-shadow: inset 0 0 5px rgba(black, .6)
+  background: $primary
+  background: -webkit-linear-gradient(top left, darken($primary, 20%), $primary)
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
++keyframes(packets)
+  0%
+    left: 190px
+  100%
+    left: 1038px
+
+#packet
+  visibility: hidden
+  position: absolute
+  width: 40px
+  height: 40px
+  top: 100px
+  border-radius: 5px
+  background: darken($primary, 10%)
+  z-index: 1
+  -webkit-animation-name: packets
+  -webkit-animation-duration: 3s
+  -webkit-animation-direction: alternate
+  -webkit-animation-timing-function: ease-in-out
+  -webkit-animation-iteration-count: infinite
+  display: flex
+  justify-content: center
+  align-items: center
+
++keyframes(packet2)
+  0%
+    top: 100px
+    left: 190px
+  30%
+    top: 323px
+    left: 362px
+  70%
+    top: 108px
+    left: 739px
+  100%
+    top: 100px
+    left: 1038px
+
++keyframes(packet-colors)
+  0%
+    background: green
+  15%
+    background: green
+  16%
+    background: green
+  50%
+    background: green
+  51%
+    background: yellow
+  84%
+    background: yellow
+  85%
+    background: red
+  100%
+    background: red
+
+#packet2
+  visibility: hidden
+  position: absolute
+  width: 40px
+  height: 40px
+  border-radius: 5px
+  background: darken($primary, 10%)
+  z-index: 1
+  -webkit-animation-name: packet2
+  -webkit-animation-duration: 5s
+  -webkit-animation-direction: alternate
+  -webkit-animation-timing-function: ease-in-out
+  -webkit-animation-iteration-count: infinite
+  display: flex
+  justify-content: center
+  align-content: center
+
+#packet3
+  position: absolute
+  width: 40px
+  height: 40px
+  border-radius: 5px
+  z-index: 1
+  // animation-name: packet2, packet-colors
+  animation-duration: 5s, 10s
+  animation-direction: alternate, normal
+  animation-timing-function: ease-in-out
+  animation-iteration-count: infinite
+
+#cookie
+  width: 35px
+  height: 35px
+
++keyframes(cookie)
+  0%
+    top: 104px
+    left: 642px
+  20%
+    top: 225px
+    left: 614px
+  50%
+    top: 332px
+    left: 398px
+  60%
+    top: 332px
+    left: 398px
+  80%
+    top: 121px
+    left: 739px
+  100%
+    top: 110px
+    left: 1021px
+
+
+#cookie_copy
+  visibility: hidden
+  width: 35px
+  height: 35px
+  position: absolute
+  top: 104px
+  left: 642px
+  // animation-name: cookie
+  animation-delay: 1.5s
+  animation-duration: 4s
+  animation-timing-function: ease-in
+  animation-iteration-count: 1
+  animation-fill-mode: forwards
+
++keyframes(x)
+  0%
+    opacity: 0
+  50%
+    opacity: 1
+  100%
+    opacity: 0
+
++keyframes(fade)
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
+#x
+  position: absolute
+  top: 15px
+  left: 393px
+  opacity: 0
+  width: 150px
+  height: 150px
+  animation-duration: 6s
+  animation-timing-function: ease-in-out
+  animation-delay: 1s
+  animation-iteration-count: 1
+
+#key1, #key2
+  position: absolute
+  width: 60px
+  height: 60px
+  opacity: 0
+  transition: opacity 2s
+
+#key1
+  top: 68px
+  left: 100px
+  transition-delay: 9.5s
+
+#key2
+  top: 68px
+  right: 50px
+  transition-delay: 4.5s
+
+
+#key-exchange
+  visibility: hidden
+  position: absolute
+  width: 40px
+  height: 40px
+  top: 100px
+  left: 190px
+  z-index: 1
+  // -webkit-animation-name: packet2
+  -webkit-animation-duration: 5s
+  -webkit-animation-direction: alternate
+  -webkit-animation-timing-function: ease-in-out
+  -webkit-animation-iteration-count: 2
+  -webkit-animation-fill-mode: forward
+
+#red_lock
+  width: 95%
+  height: 95%

@@ -1,11 +1,93 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Use HTTPS</title>
-  </head>
-  <body>
-  <h1>HEY</h1>
-  <p>Times are a'changing</p>
-  </body>
+<html lang="en">
+<head>
+  <title>MITM</title>
+  <meta charset="utf-8">
+
+  <!-- If the browser is Internet Explorer, this ensures the browser will be able to render our website. -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="description" content="">
+  <meta name="author" content="mail@brooks.codes">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <h1 id="header">Why HTTPS?</h1>
+
+  <div id="container">
+
+    <img id="victim" src="man_laptop.png">
+    <div id="victim-label">Victim</div>
+
+    <img id="router" src="router.png">
+    <div id="router-label">Network Router</div>
+
+    <img id="server" src="server.png">
+    <div id="server-label">Web Server</div>
+
+    <img id="hacker" src="lady_laptop.png">
+    <div id="hacker-label">Malicious Hacker</div>
+
+    <div id="packet"></div>
+
+    <div id="victim-router">
+      <div class="signal"></div>
+      <div class="signal"></div>
+      <div class="signal"></div>
+      <div class="signal"></div>
+      <div class="signal"></div>
+      <div class="signal"></div>
+
+    </div>
+
+    <img id="x" src="./x.png">
+
+    <div id="victim-hacker">
+      <div class="signal"></div>
+      <div class="signal"></div>
+      <div class="signal"></div>
+    </div>
+
+    <div id="hacker-router">
+      <div class="signal"></div>
+      <div class="signal"></div>
+      <div class="signal"></div>
+      <div class="signal"></div>
+      <div class="signal"></div>
+    </div>
+
+    <img id="cookie_copy" src="./copy_cookie.png">
+
+    <img id="magnifying" src="./magnifying.png">
+
+    <div id="router-server">
+      <div class="signal"></div>
+      <div class="signal"></div>
+      <div class="signal"></div>
+    </div>
+
+    <div id="packet2"></div>
+    <div id="packet3"></div>
+
+    <img id="key1" src="red_key.png">
+    <img id="key2" src="red_key.png">
+    <img id="key-exchange" src="lock.png">
+
+
+    <div id="info">
+      <p id="content">
+        A man in the middle attack involves tricking a victim's computer that is connected
+        to wifi to think that you are the wifi, and tricking websites into thinking
+        you are the victim's computer. Once this happens, traffic from both ends will
+        be sent through your computer, allowing you to see any transmitted data.
+      </p>
+      <button id="next">Next</button>
+    </div>
+  </div>
+  <script src="./jquery-3.0.0.min.js"></script>
+  <script src="./index.js"></script>
+</body>
 </html>
